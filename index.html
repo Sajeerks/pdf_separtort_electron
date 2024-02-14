@@ -5,14 +5,22 @@
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
     <link href="./styles.css" rel="stylesheet">
-    <title>Hello World!</title>
+    <title>pdf separator</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
+    <h1>Allah hu albar</h1>
+    <!-- We are using Node.js <span id="node-version"></span>,
     Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+    and Electron <span id="electron-version"></span>. -->
 
+
+    <label for="enter the file input detils">PDF separator</label>
+
+    <textarea style="display: flex;flex-wrap: wrap;height: 300px;width: 300px;" id="story" name="story"  type="text" placeholder="enter ur filepaths as in format   lastpage no , filename,lastpage no , filename ,lastpage no ,
+     filename ,lastpage no , filename  "></textarea>
+
+ 
+    <input type="file" id="uploadInput" accept="application/pdf"  />
     <!-- You can also require other files to run in this process -->
     <script src="./renderer.js"></script>
   </body>
