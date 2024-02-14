@@ -76,7 +76,7 @@ app.on('window-all-closed', function () {
 async function separtedPDFS(args) {
 let fileSeparatorDivisons = args.fileSeparatorDivisons
 let inputFilepath = args.inputFilepath
-fileSeparatorDivisons = fileSeparatorDivisons.replaceAll(" ","")
+// fileSeparatorDivisons = fileSeparatorDivisons.replaceAll(" ","")
 
 try {
 
@@ -112,10 +112,20 @@ console.log("fileSeparatorArray.length==", fileSeparatorArray.length);
 anslength =fileSeparatorArray.length
 for (let i = 0; i < fileSeparatorArray.length; i++) {
 
-  if( ! (!isNaN(parseInt(fileSeparatorArray[i])) && isFinite(fileSeparatorArray[i]))  ){
-    anslength=null
-    throw Error("not a valid page number")
-  }
+  // if( ! (!isNaN(parseInt(fileSeparatorArray[i])) && isFinite(fileSeparatorArray[i]))  ){
+  //   anslength=null
+  //   throw Error("not a valid page number")
+  // }
+
+
+  if(i%2===0){
+    // pageNoArrayNameArray.push([fileSeparatorArray[i], fileSeparatorArray[i+1]])
+
+    if( ! (!isNaN(parseInt(fileSeparatorArray[i])) && isFinite(fileSeparatorArray[i]))  ){
+      anslength=null
+      throw Error("not a valid page number")
+    }
+   }
 
   if(anslength ===null){
     
@@ -126,7 +136,7 @@ for (let i = 0; i < fileSeparatorArray.length; i++) {
   // console.log("i===",i);
   // console.log("fileSeparatorArray[i+1]--",fileSeparatorArray[i+1]);
  if(i%2===0){
-  pageNoArrayNameArray.push([fileSeparatorArray[i], fileSeparatorArray[i+1]])
+  pageNoArrayNameArray.push([fileSeparatorArray[i].replaceAll(" ",""), fileSeparatorArray[i+1]])
  }
  
   

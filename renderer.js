@@ -20,7 +20,9 @@ uploadInput.addEventListener("change",async (e)=>{
      const inputFilepath = inputFile.path
  
       let fileSeparatorDivisons = nameListInput.value
-      fileSeparatorDivisons = fileSeparatorDivisons.replaceAll(" ","").replace(/\n|\r/g, "");
+      // fileSeparatorDivisons = fileSeparatorDivisons.replaceAll(" ","").replace(/\n|\r/g, "");
+      // fileSeparatorDivisons = fileSeparatorDivisons
+
      console.log({fileSeparatorDivisons});
 if(inputFilepath &&  fileSeparatorDivisons!==""){
 // console.log(window.electronApi);
